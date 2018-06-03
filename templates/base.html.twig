@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="w-100 h-100 m-0" lang="{{ app.request.locale|split('_')[0] }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="url" content="{{ app.request.schemeAndHttpHost }}">
+
+        <title>{% block title %}{% block app_name %}{{ app_name | trim('"') }}{% endblock %}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}"/>
+
+        <base href="{{ app.request.schemeAndHttpHost }}" />
+        <link rel="canonical" href="{{ app.request.uri }}">
+
+        <meta name="application-name" content="{{ block('title') }}">
+        <meta name="description" content="{{ block('description') | slice(0, 150) }}">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="{{ block('app_name') }}">
+
+        <!-- -->
+
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% endblock %}
+    </head>
+    <body class="w-100 h-100" data-route="{{ app.request.attributes.get('_route') }}">
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('build/manifest.js') }}"></script>
+            <script src="{{ asset('build/vendors.js') }}"></script>
+            <script src="{{ asset('build/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

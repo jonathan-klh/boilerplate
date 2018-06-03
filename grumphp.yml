@@ -1,0 +1,25 @@
+# grumphp.yml
+parameters:
+    bin_dir: "bin"
+    git_dir: "."
+    ascii:
+        failed: ~
+        succeeded: ~
+    tasks:
+        composer: ~
+        composer_script:
+            script: "post-update-cmd"
+        jsonlint: ~
+        phplint: ~
+        yamllint: ~
+        xmllint: ~
+        phpversion:
+            project: '7.1'
+        securitychecker: ~
+        phpcsfixer2: ~
+        git_blacklist:
+            keywords:
+                - "var_dump("
+                - "dump("
+                - "die("
+            triggered_by: [php]

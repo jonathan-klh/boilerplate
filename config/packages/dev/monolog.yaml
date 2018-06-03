@@ -1,0 +1,32 @@
+monolog:
+    use_microseconds: false
+    channels: [doctrine_event]
+    handlers:
+        main:
+            type: rotating_file
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            max_files: 15
+            level: debug
+            channels: ["!event", "!doctrine", "!security", "!doctrine_event"]
+        security:
+            type: stream
+            path: "%kernel.logs_dir%/security.%kernel.environment%.log"
+            level: debug
+            channels: security
+        doctrine_event:
+            type: stream
+            path: "%kernel.logs_dir%/doctrine.%kernel.environment%.log"
+            level: debug
+            channels: doctrine_event
+        console:
+            type: console
+            process_psr_3_messages: false
+            channels: ["!event", "!doctrine'", "!doctrine_event", "!console"]
+        server_log:
+            type: server_log
+            process_psr_3_messages: false
+            host: 127.0.0.1:9911
+        syslog:
+            type: syslog
+            path: "%kernel.logs_dir%/sys.log"
+            level: error

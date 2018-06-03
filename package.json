@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@symfony/webpack-encore": "^0.19.0",
+    "dotenv-webpack": "^1.5.5",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.6",
+    "webpack-notifier": "^1.5.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ios >= 8"
+  ]
+}
