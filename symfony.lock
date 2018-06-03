@@ -239,6 +239,9 @@
     "symfony/polyfill-apcu": {
         "version": "v1.7.0"
     },
+    "symfony/polyfill-ctype": {
+        "version": "v1.8.0"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.7.0"
     },
@@ -298,6 +301,9 @@
             "version": "3.3",
             "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
         }
+    },
+    "symfony/validator": {
+        "version": "v3.4.11"
     },
     "symfony/var-dumper": {
         "version": "v3.4.8"
