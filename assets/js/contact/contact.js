@@ -1,23 +1,22 @@
 $(document).ready(function () {
-    $('#subcribe_request_sujet').on('change', function (e) {
-        console.log($('#subcribe_request_sujet'));
-        console.log('dedans');
 
+    // On change topic
+    $('body').on('change', '#contact_sujet' ,function (e) {
+
+        var url = $(this).attr('data-url');
         var value = $(this).val();
         var text = $(this).find('option:selected').text();
+
         var data = {
             'value': value,
-            'text': text
+            'text': text,
+            'url' : url
         };
 
-        $.ajax({
-            url: url,
-            data: { text: data.text, value: data.value },
-            method: 'GET', success: function (s) {
+        // Ajax Request
+        var updateForm = require('./updateForm');
+        updateForm(data);
 
-            }
-        });
-        console.log(data)
     });
 });
 
