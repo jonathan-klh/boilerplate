@@ -1,10 +1,10 @@
-#boilerplate
+# Boilerplate
 
 
 Une page de contact avec des champs dynamiques
 
 
-####Prerequis
+#### Prerequis
 
 - docker & docker-compose
 - npm & yarn
@@ -19,6 +19,6 @@ Une page de contact avec des champs dynamiques
     composer require symfony/web-server-bundle --dev
     php bin/console server:start
     
-###Install the project
+### Install the project
     make install
     make build
