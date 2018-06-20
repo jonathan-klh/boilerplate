@@ -5,3 +5,6 @@ nelmio_security:
   path: /nelmio/csp/report
   defaults: { _controller: nelmio_security.csp_reporter_controller:indexAction }
   methods: [POST]
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
