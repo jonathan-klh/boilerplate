@@ -10,13 +10,18 @@ Encore
 
     // will create web/build/app.js and web/build/app.css
     .addEntry('app', './assets/js/app.js')
+    .addEntry('contact', './assets/js/contact/contact.js')
 
     //.createSharedEntry('vendors', [])
 
     // allow sass/scss files to be processed
-    .enableSassLoader(function(sassOptions) {}, {
-        resolveUrlLoader: false
-     })
+    // .enableSassLoader(function(sassOptions) {}, {
+    //     resolveUrlLoader: false
+    //  })
+
+    .enableSassLoader()
+    .autoProvidejQuery()
+    // .enableReactPreset()
 
 	.enablePostCssLoader()
 

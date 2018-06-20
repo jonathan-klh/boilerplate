@@ -36,6 +36,10 @@
             <script src="{{ asset('build/manifest.js') }}"></script>
             <script src="{{ asset('build/vendors.js') }}"></script>
             <script src="{{ asset('build/app.js') }}"></script>
+
         {% endblock %}
+        {% block customJavascripts %}
+        {% endblock %}
+
     </body>
 </html>

@@ -1,0 +1,4 @@
+{{ form_start(form, {} , { 'action': path('contact'), 'method': 'POST'}) }}
+{{ form_widget(form.sujet, {'attr':{'data-url': path('contact_form_is_loading') }}) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}

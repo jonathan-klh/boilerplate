@@ -88,7 +88,8 @@ install@prod:
 #########
 ## Build the project
 build:
-	yarn run encore dev
+	yarn run encore dev --watch
+
 
 ## Build the project for prod (only)
 build@prod:
