@@ -64,6 +64,6 @@ class ContactController extends Controller
             'form' => $form->createView()
         ]);
 
-        return new JsonResponse(['view' => $view]);
+        return new JsonResponse(['view' => $view], 200);
     }
 }
